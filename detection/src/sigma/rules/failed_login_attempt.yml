@@ -1,0 +1,16 @@
+id: sigma-failed-login-attempt
+title: Failed Login Attempt Signal
+description: >
+  Detects an individual failed authentication/login event signal.
+  ARCHITECTURE NOTE: A single failed login event is an indicator signal, NOT a confirmed brute-force attack.
+  Primary brute-force threat detection belongs to Module 2 (Detection & Risk Engine) and will be implemented
+  via a stateful, windowed multi-event correlator (tracking N failures per user/IP within T time window)
+  in a later phase.
+severity: low
+tags:
+  - attack.t1110
+detection:
+  selection:
+    event_type: login_attempt
+    normalized.status: failure
+  condition: selection
