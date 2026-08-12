@@ -1,0 +1,50 @@
+{
+  "ips": {
+    "185.220.101.5": {
+      "threat_label": "Known CobaltStrike C2 Server",
+      "severity": "high",
+      "confidence": 0.95
+    },
+    "198.51.100.44": {
+      "threat_label": "Malicious Scanner IP",
+      "severity": "medium",
+      "confidence": 0.85
+    }
+  },
+  "domains": {
+    "malicious-c2.com": {
+      "threat_label": "Known Malware C2 Domain",
+      "severity": "high",
+      "confidence": 0.90
+    },
+    "phishing-fake-bank.net": {
+      "threat_label": "Credential Phishing Domain",
+      "severity": "critical",
+      "confidence": 0.98
+    }
+  },
+  "urls": {
+    "http://malicious-c2.com/payload.exe": {
+      "threat_label": "Malware Payload Download URL",
+      "severity": "critical",
+      "confidence": 0.99
+    },
+    "https://phishing-fake-bank.net/login.php": {
+      "threat_label": "Phishing Harvest URL",
+      "severity": "critical",
+      "confidence": 0.98
+    }
+  },
+  "file_hashes": {
+    "44d88612fea8a8f36de82e1278abb02f": {
+      "threat_label": "WannaCry Ransomware MD5",
+      "severity": "critical",
+      "confidence": 1.00
+    },
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": {
+      "threat_label": "Trojan.Generic Payload SHA256",
+      "severity": "high",
+      "confidence": 0.92
+    }
+  }
+}
